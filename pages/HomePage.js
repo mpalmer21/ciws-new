@@ -1,9 +1,11 @@
+import Link from "next/link";
 import {
   AiOutlineEdit,
   AiFillFolderOpen,
   AiOutlineTool,
   AiOutlineDeliveredProcedure,
 } from "react-icons/ai";
+// import Link from "next/link";
 
 const HomePage = () => {
   return (
@@ -18,68 +20,78 @@ const HomePage = () => {
         {/* navigation to the create route */}
         <ul className="home_link_block">
           <li>
-            <a href="/Create">
-              <AiOutlineEdit
-                style={{
-                  fontSize: "40px",
-                  fontWeight: "bold",
-                  fill: "#003f47",
-                }}
-              />
-              Book In Form
-            </a>
+            <Link to="/Create">
+              <a>
+                <AiOutlineEdit
+                  style={{
+                    fontSize: "40px",
+                    fontWeight: "bold",
+                    fill: "#003f47",
+                  }}
+                />
+                Book In Form
+              </a>
+            </Link>
           </li>
           <li>
             {/* navigation to the completedforms route */}
-            <a href="/CompletedForms">
-              <AiFillFolderOpen
-                style={{
-                  fontSize: "40px",
-                  fontWeight: "bold",
-                  fill: "#003f47",
-                }}
-              />
-              Completed Forms
-            </a>
+            <Link to="/CompletedForms">
+              <a>
+                <AiFillFolderOpen
+                  style={{
+                    fontSize: "40px",
+                    fontWeight: "bold",
+                    fill: "#003f47",
+                  }}
+                />
+                Completed Forms
+              </a>
+            </Link>
           </li>
           <li>
             {/* navigation to the user defined field route */}
-            <a href="/UserDefinedField">
-              <AiOutlineTool
-                style={{
-                  fontSize: "40px",
-                  fontWeight: "bold",
-                  fill: "#003f47",
-                }}
-              />
-              Inspection Part Details
-            </a>
+            <Link to="/UserDefinedField">
+              <a>
+                <AiOutlineTool
+                  style={{
+                    fontSize: "40px",
+                    fontWeight: "bold",
+                    fill: "#003f47",
+                  }}
+                />
+                Inspection Part Details
+              </a>
+            </Link>
           </li>
           <li>
             {/* navigation to the completed inspection route */}
-            <a href="/CompletedInspection">
-              <AiFillFolderOpen
-                style={{
-                  fontSize: "40px",
-                  fontWeight: "bold",
-                  fill: "#003f47",
-                }}
-              />
-              Completed Inspection
-            </a>
+            <Link to="/CompletedInspection">
+              <a>
+                <AiFillFolderOpen
+                  style={{
+                    fontSize: "40px",
+                    fontWeight: "bold",
+                    fill: "#003f47",
+                  }}
+                />
+                Completed Inspection
+              </a>
+            </Link>
           </li>
           <li>
             {/* navigation to the userdefined field route */}
-            <a href="/Delivery">
-              <AiOutlineDeliveredProcedure
-                style={{
-                  fontSize: "40px",
-                  fontWeight: "bold",
-                  fill: "#003f47",
-                }}
-              />
-              Delivery
-            </a>
+            <Link to="/Delivery">
+              <a>
+                <AiOutlineDeliveredProcedure
+                  style={{
+                    fontSize: "40px",
+                    fontWeight: "bold",
+                    fill: "#003f47",
+                  }}
+                />
+                Delivery
+              </a>
+            </Link>
           </li>
         </ul>
       </div>

@@ -1,0 +1,122 @@
+
+  
+  
+  /* search previews / list */
+  .search-preview {
+    background-color: #6b240e;
+    padding: 10px 16px;
+    margin: 20px 0;
+    border-bottom: 1px solid #aad6db;
+    animation: 1.25s flyin ease;
+  }
+  
+  .search-preview:hover {
+    box-shadow:  0 4px 8px 0  #000000;
+  }
+  
+  .search-preview h2 {
+    font-size: 4px;
+    color:  #003f47;
+    margin-bottom: 8px;
+    font-family: "Larsseit";
+  }
+  
+  .search-preview p {
+    font-size: 15px;
+    color:  #6b240e;
+    font-weight: bold;
+    margin-bottom: 1px;
+    font-family: "Larsseit";
+  }
+  
+  .search-preview a{
+    text-decoration: none;
+  }
+  /* search details page */
+  .search-details {
+    box-shadow: 0 1px 3px 0 #000000;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    text-align: center;
+    
+    animation: 1.25s flyin ease;
+    
+    border-bottom: 1px solid #fafafa;
+  }
+  
+  .search-details:hover {
+    box-shadow:  0 1px 3px 0  #000000;
+  }
+  
+  .search-details h2 {
+    font-size: 20px;
+    text-align: center;
+    color: #4b2faf;
+    margin-bottom: 10px;
+  }
+  
+  .search-details p {
+    font-size: 15px;
+    color: #000000;
+    margin-bottom: 1px;
+  }
+  
+  .search-details div {
+    margin: 20px 0;
+    font-size: 15px;
+    color: #000000;
+  }
+  
+  .search-details button {
+    background: linear-gradient(90deg, #000000, #003f47) !important;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    
+  }
+  
+  .search-details table {
+  
+    font-family: "Larsseit";
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .search-details div {
+    color: rgba(0, 0, 0, 0.747);
+  }
+  
+  .search-details  td, .create  th {
+    border: 1px solid rgba(0, 0, 0, 0.836);
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .search-details tr:nth-child(even){background-color: rgb(228, 228, 228);}
+  
+  .search-details  tr:hover {background-color: rgb(194, 190, 190);}
+  
+  .search-details  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: #000000;
+    text-align: center;
+    background-color: #003f47;
+    border: 1px solid rgb(0, 0, 0);
+    color:  #000000;
+    font-family: "Larsseit";
+    ;
+  }
+  .search-details strong{
+    text-align: center;
+  }
+  
+  .search-details div{
+    color: #000000;
+    text-align: center;
+  }
+  
+  

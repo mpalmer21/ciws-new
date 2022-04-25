@@ -1,0 +1,163 @@
+
+  .home_contain {
+    
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    color: #003f47;
+  }
+  .home_header {
+    font-weight: 600;
+    font-size: 24px;
+    color: rgb(4, 17, 29);
+  }
+  .home_header h1 {
+    line-height: 110%;
+    text-align: center;
+    color: #003f47;
+  }
+  .home_para {
+    display: block;
+  }
+  .home_para {
+    font-weight: 400;
+      font-size: 16px;
+      color: rgb(112, 122, 131);
+  }
+  .home_para p{
+    display: block;
+    text-align: center;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+  
+  .home_link_contain{
+    margin-bottom: 72px;
+    margin-top: 24px;
+  }
+  
+  .home_link_block {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom: none;
+    border: 1px solid rgb(229, 232, 235);
+    border-radius: 10px;
+    margin: 0px;
+    align-items: center;
+  }
+  
+  .home_link_block ul {
+    list-style-type: none;
+    padding-left: 0px;
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    
+  }
+  
+  .home_link_block li {
+    border-bottom: 1px solid rgb(229, 232, 235);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    display: list-item;
+    list-style-type: none;
+  }
+  
+  .home_link_block a {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: none;
+    overflow: hidden;
+    width: 100%;
+    font-size: 100%;
+    font-weight: 600;
+    padding: 16px;
+    border: 1px solid rgb(229, 232, 235);
+    color: rgb(53, 56, 64);
+    text-align: left;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  
+  .homepage {
+    box-shadow: 0 1px 3px 0 #000000;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    text-align: center;
+    display: grid;
+    padding: 10px 16px;
+    animation: 1.25s flyin ease;
+    margin: 2px 0;
+    border-bottom: 1px solid #fafafa;
+  }
+  
+  .homepage div {
+    padding: 6%;
+    contain: content;
+    flex-wrap: nowrap;
+  }
+  
+  .homepage:hover {
+    box-shadow:  0 1px 3px 0  #000000;
+  }
+  
+  .homepage h1 {
+    color:  #414141;
+  
+    font-family: "Larsseit"; 
+  }
+  
+  .homepage p {
+    font-size: 15px;
+    color:  #ffffff;
+    font-weight: bold;
+    margin-bottom: 1px;
+    font-family: "Larsseit";
+  }
+  
+  .homepage a{
+    text-decoration: none;
+  }
+  
+  .homepage input, .homepage textarea, .homepage select  {
+    background-color: #ffffff !important;
+    font-weight: bold;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    padding: 6px 10px;
+    margin: 10px 0;
+    font-family: "Larsseit";
+    box-sizing: border-box;
+    display: block;
+    border-radius: 4px;
+  }
+  
+  .homepage button {
+    background: linear-gradient(90deg, #000000, #003f47) !important;
+    color: rgb(3, 0, 0);
+    font-family: "Larsseit";
+    border: 0;
+    padding: 8px;
+    display: inline;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .homepage strong{
+    font-size: large;
+    line-height: 17px;
+    display: block;
+    color: #ffffff;
+    color:  #003f47;
+    font-family: "Larsseit";
+  }

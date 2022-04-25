@@ -1,0 +1,154 @@
+
+
+
+  
+  /* form previews / list */
+  .form-preview {
+    padding: 10px 16px;
+    margin: 20px 0;
+    border-bottom: 1px solid #aad6db;
+    animation: 1.25s flyin ease;
+  }
+  
+  .form-preview:hover {
+    box-shadow:  0 4px 8px 0  #000000;
+  }
+  
+  .form-preview h2 {
+    font-size: 19px;
+    color:  #003f47;
+    margin-bottom: 8px;
+    font-family: "Larsseit";
+  }
+  
+  .form-preview p {
+    font-size: 15px;
+    color:  #6b240e;
+    font-weight: bold;
+    margin-bottom: 1px;
+    font-family: "Larsseit";
+  }
+  
+  .form-preview a{
+    text-decoration: none;
+  }
+  /* form details page */
+  /* search previews / list */
+  .search-preview {
+    padding: 10px 16px;
+    background: rgb(0, 0, 0);
+    margin: 20px 0;
+    border-bottom: 1px solid #ffffff;
+    animation: 1.25s flyin ease;
+  }
+  
+  .search-preview:hover {
+    box-shadow:  0 4px 8px 0  #000000;
+  }
+  
+  .search-preview h2 {
+    font-size: 19px;
+    color:  #ffffff;
+    margin-bottom: 8px;
+    font-family: "Larsseit";
+  }
+  
+  .search-preview p {
+    font-size: 15px;
+    color:  #ffffff;
+    font-weight: bold;
+    margin-bottom: 1px;
+    font-family: "Larsseit";
+  }
+  
+  .search-preview a{
+    text-decoration: none;
+  }
+  /* search details page */
+  .form-details {
+    box-shadow: 0 1px 3px 0 #000000;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    text-align: center;
+    
+    animation: 1.25s flyin ease;
+    
+    border-bottom: 1px solid #fafafa;
+  }
+  
+  .form-details:hover {
+    box-shadow:  0 1px 3px 0  #000000;
+  }
+  
+  .form-details h2 {
+    font-size: 20px;
+    text-align: center;
+    color: #4b2faf;
+    margin-bottom: 10px;
+  }
+  
+  .form-details p {
+    font-size: 15px;
+    color: #000000;
+    margin-bottom: 1px;
+  }
+  
+  .form-details div {
+    margin: 20px 0;
+    font-size: 15px;
+    color: #000000;
+  }
+  
+  .form-details button {
+    background: linear-gradient(90deg, #000000, #003f47) !important;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    
+  }
+  
+  .form-details table {
+  
+    font-family: "Larsseit";
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .form-details div {
+    color: rgba(0, 0, 0, 0.747);
+  }
+  
+  .form-details  td, .create  th {
+    border: 1px solid rgba(0, 0, 0, 0.836);
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .form-details tr:nth-child(even){background-color: rgb(228, 228, 228);}
+  
+  .form-details  tr:hover {background-color: rgb(194, 190, 190);}
+  
+  .form-details  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: #000000;
+    text-align: center;
+    background-color: #003f47;
+    border: 1px solid rgb(0, 0, 0);
+    color:  #000000;
+    font-family: "Larsseit";
+    ;
+  }
+  .form-details strong{
+    text-align: center;
+  }
+  
+  .form-details div{
+    color: #000000;
+    text-align: center;
+  }
+  
+  

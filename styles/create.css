@@ -1,0 +1,298 @@
+/* Progressbar */
+
+.home_contain{
+  
+  border-radius: 30px;
+  border: 1px solid #ffffff;
+  box-shadow: rgba(4, 17, 29, 0.25) 0px 0px 8px 0px;
+}
+
+
+.multistep-form h1{
+    text-align: center;
+    color: #003f47;
+    
+  }
+  .progressbar {
+    position: relative;
+    animation: slideInFromLeft 1s ease-in;
+    display: flex;
+    justify-content: space-between;
+    counter-reset: step;
+    margin: 2rem 0 4rem;
+  }
+  
+  .progressbar::before,
+  .progress {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    background-color: #dcdcdc;
+    z-index: -1;
+  }
+  
+  .progress {
+    background-color: var(--color-blog);
+    width: 0%;
+    transition: 0.3s;
+  }
+  
+  .progress-step {
+    width: 2.1875rem;
+    height: 2.1875rem;
+    background-color: #dcdcdc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .progress-step::before {
+    counter-increment: step;
+    content: counter(step);
+  }
+  
+  .progress-step::after {
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    font-size: 0.85rem;
+    color: #666;
+  }
+  
+  .progress-step-active {
+    background-color: var(--color-blog);
+    color: #f3f3f3;
+  }
+  
+  /* form */
+  
+  .form-step {
+    display:block;
+    transform-origin:center;
+    animation: slideInFromRight 1.5s ease-in;
+  }
+  
+  .form-step-active {
+    display: block;
+  }
+  
+  /* create */
+  .multistep-form h1{
+    animation: slideInFromTop 1s ease-in;
+      
+  }
+  .create label {
+    text-align: left;
+    display: block;
+    color: #ffffff;
+  }
+  
+  .create strong {
+    text-align:center;
+    display: block;
+    color: #ffffff;
+    color:  #003f47;
+    font-family: "Larsseit";
+  }
+  
+  .create h2 {
+    font-size: 20px;
+    color:  #414141;
+    font-family: "Larsseit";
+    margin:  32px;
+  }
+  
+  .create input, .create textarea {
+    background-color: #ffffff !important;
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    width: 50%;
+    padding: 6px 10px;
+    margin: 10px 0;
+    font-family: "Larsseit";
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    border-radius: 4px; 
+  
+  }
+  
+  .head select{
+    background-color: #ffffff !important;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    width: 50%;
+    padding: 6px 10px;
+    margin: 10px 0;
+    font-family: "Larsseit";
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    border-radius: 4px; 
+  }
+  
+  
+  .create button {
+    background: linear-gradient(90deg, #000000, #003f47) !important;
+    margin: 10px;
+    margin-inline-end: 50px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-family: "Larsseit";
+    border: 0;
+    justify-items: stretch;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .create {
+    
+    box-shadow: 0 1px 3px 0 #000000;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 16px;
+    margin: 2px 0;
+    border-bottom: 1px solid #fafafa;
+  }
+  
+  .create:hover {
+    box-shadow:  0 1px 3px 0  #000000;
+  }
+  
+  .sig input {
+    width: 50%;
+    text-align: center;
+  }
+  
+  .td input {
+    width: 100%;
+  }
+  .td select{
+    background-color: #ffffff !important;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    padding: 6px 10px;
+    margin: 10px 0;
+    font-family: "Larsseit";
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    border-radius: 4px; 
+    word-break: break-all;
+  }
+  
+  td select {
+    width: 100%;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .create table {
+    color:  #003f47;
+    font-family: "Larsseit";
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .create div {
+    color: rgb(0, 0, 0);
+  }
+  .tabrep{
+    color: rgb(0, 0, 0);
+  
+    
+  }
+  
+  .create  td, .create  th  {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .create tr:nth-child(even){background-color: rgb(228, 228, 228);}
+  
+  .create  tr:hover {background-color: rgb(194, 190, 190);}
+  
+  .create  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: #000000;
+    text-align: left;
+    background-color: #003f47;
+    border: 1px solid rgb(0, 0, 0);
+  }
+  
+  .flex{
+    text-align: center;
+    font-size: 100%;
+    width: 100%;
+    margin: 35px 0;
+    align-items: center;
+  }
+  
+  
+  .filter input {
+    
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    padding: 6px 10px;
+    margin: 10px 0;
+    font-family: "Larsseit";
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    border-radius: 50px; 
+    word-break: break-all;
+  
+  }
+  .filter button{
+    background-color: #ffffff;
+    align-items: center;
+    text-align: center;
+    border: #ffffff;
+    width: 100%;
+    height: 100%;
+    animation: slideInFromRight 1.5s ease-in;
+  }
+  
+  .create select {
+    background-color: #ffffff !important;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    padding: 6px 10px;
+    margin: 10px 0;
+    font-family: "Larsseit";
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    border-radius: 4px; 
+    word-break: break-all;
+  }
+  
+
+  
+  

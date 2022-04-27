@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import styles from "../styles/Guides.module.css";
 import AuthContext from "../stores/authContext";
+import HomePage from "./HomePage";
 
 export default function Guides() {
   const { user, authReady, login } = useContext(AuthContext);
@@ -58,6 +59,7 @@ export default function Guides() {
             </p>
           </div>
         ))}
+      <HomePage />
     </div>
   );
 }

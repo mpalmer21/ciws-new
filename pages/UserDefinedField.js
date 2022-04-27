@@ -104,39 +104,40 @@ const UserDefinedField = () => {
   console.log(setValues2);
 
   return (
-    <div>
-      <div className="multistep-form">
-        <h1>Fields</h1>
-      </div>
+    <></>
+    // <div>
+    //   <div className="multistep-form">
+    //     <h1>Fields</h1>
+    //   </div>
 
-      <div className="user">
-        <div>
-          <h2>User Defined Fields</h2>
-          {/* passisng props */}
-          {
-            {
-              1: <Step1 handleChange={handleChange} item={values2} />,
-              2: <Step2 handleChange={handleChange} item={values2} />,
-              3: <Step3 handleChange={handleChange} item={values2} />,
-              4: <Step4 handleChange={handleChange} item={values2} />,
-              5: <Step5 handleChange={handleChange} item={values2} />,
-              6: <Step6 handleChange={handleChange} item={values2} />,
-              7: <Step7 handleChange={handleChange} item={values2} />,
-              8: (
-                <FinalStep
-                  handleChange={handleChange}
-                  item={values2}
-                  handleSubmit={handleSubmit}
-                />
-              ),
-            }[step]
-          }
-        </div>
-        {/* tertionary for handing next and previous steps */}
-        {step > 1 ? <button onClick={prevStep}>Back</button> : null}
-        {step < 8 ? <button onClick={nextStep}>Next</button> : null}
-      </div>
-    </div>
+    //   <div className="user">
+    //     <div>
+    //       <h2>User Defined Fields</h2>
+    //       {/* passisng props */}
+    //       {
+    //         {
+    //           1: <Step1 handleChange={handleChange} item={values2} />,
+    //           2: <Step2 handleChange={handleChange} item={values2} />,
+    //           3: <Step3 handleChange={handleChange} item={values2} />,
+    //           4: <Step4 handleChange={handleChange} item={values2} />,
+    //           5: <Step5 handleChange={handleChange} item={values2} />,
+    //           6: <Step6 handleChange={handleChange} item={values2} />,
+    //           7: <Step7 handleChange={handleChange} item={values2} />,
+    //           8: (
+    //             <FinalStep
+    //               handleChange={handleChange}
+    //               item={values2}
+    //               handleSubmit={handleSubmit}
+    //             />
+    //           ),
+    //         }[step]
+    //       }
+    //     </div>
+    //     {/* tertionary for handing next and previous steps */}
+    //     {step > 1 ? <button onClick={prevStep}>Back</button> : null}
+    //     {step < 8 ? <button onClick={nextStep}>Next</button> : null}
+    //   </div>
+    // </div>
   );
 };
 

@@ -36,7 +36,7 @@ export default function Delivery() {
   );
   return (
     <TableContainer component={Paper}>
-      <Table aria-label="simple table">
+      {/* <Table aria-label="simple table">
         <TableHead className="id={`heading${i}`}">
           <TableRow>
             <StyledTableCell align="right">Customer</StyledTableCell>
@@ -86,7 +86,7 @@ export default function Delivery() {
             </StyledTableRow>
           ))}
         </TableBody>
-      </Table>
+      </Table> */}
     </TableContainer>
   );
 }

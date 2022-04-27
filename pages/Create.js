@@ -168,7 +168,7 @@ const Create = () => {
 
   return (
     <div>
-      <div className="multistep-form">
+      {/* <div className="multistep-form">
         <h1>Book In Form</h1>
       </div>
 
@@ -247,7 +247,7 @@ const Create = () => {
             />
           ),
         }[step]
-      }
+      } */}
     </div>
   );
 };

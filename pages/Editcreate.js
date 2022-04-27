@@ -145,7 +145,7 @@ const Editcreate = () => {
 
   return (
     <div className="form-details container-fluid mt-4">
-      {isPending && <div>Loading...</div>}
+      {/* {isPending && <div>Loading...</div>}
       {error && <div>{error}</div>}
       {form && (
         <article>
@@ -958,7 +958,7 @@ const Editcreate = () => {
             <button onClick={handleClick}>delete</button>
           </div>
         </article>
-      )}
+      )} */}
     </div>
   );
 };

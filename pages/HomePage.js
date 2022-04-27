@@ -4,6 +4,7 @@ import {
   AiOutlineTool,
   AiOutlineDeliveredProcedure,
 } from "react-icons/ai";
+import Link from "next/link";
 
 const HomePage = () => {
   return (
@@ -18,16 +19,18 @@ const HomePage = () => {
         {/* navigation to the create route */}
         <ul className="home_link_block">
           <li>
-            <a href="/">
-              <AiOutlineEdit
-                style={{
-                  fontSize: "40px",
-                  fontWeight: "bold",
-                  fill: "#003f47",
-                }}
-              />
-              Book In Form
-            </a>
+            <Link href="/">
+              <a>
+                <AiOutlineEdit
+                  style={{
+                    fontSize: "40px",
+                    fontWeight: "bold",
+                    fill: "#003f47",
+                  }}
+                />
+                Book In Form
+              </a>
+            </Link>
           </li>
           <li>
             {/* navigation to the completedforms route */}
@@ -46,7 +49,8 @@ const HomePage = () => {
           </li>
           <li>
             {/* navigation to the user defined field route */}
-            <a href="/">
+            <Link href="/"></Link>
+            <a>
               <AiOutlineTool
                 style={{
                   fontSize: "40px",
@@ -59,29 +63,33 @@ const HomePage = () => {
           </li>
           <li>
             {/* navigation to the completed inspection route */}
-            <a href="/">
-              <AiFillFolderOpen
-                style={{
-                  fontSize: "40px",
-                  fontWeight: "bold",
-                  fill: "#003f47",
-                }}
-              />
-              Completed Inspection
-            </a>
+            <Link href="/">
+              <a>
+                <AiFillFolderOpen
+                  style={{
+                    fontSize: "40px",
+                    fontWeight: "bold",
+                    fill: "#003f47",
+                  }}
+                />
+                Completed Inspection
+              </a>
+            </Link>
           </li>
           <li>
-            {/* navigation to the userdefined field route */}
-            <a href="/">
-              <AiOutlineDeliveredProcedure
-                style={{
-                  fontSize: "40px",
-                  fontWeight: "bold",
-                  fill: "#003f47",
-                }}
-              />
-              Delivery
-            </a>
+            <Link href="/">
+              {/* navigation to the userdefined field route */}
+              <a>
+                <AiOutlineDeliveredProcedure
+                  style={{
+                    fontSize: "40px",
+                    fontWeight: "bold",
+                    fill: "#003f47",
+                  }}
+                />
+                Delivery
+              </a>
+            </Link>
           </li>
         </ul>
       </div>

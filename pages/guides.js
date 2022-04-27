@@ -39,27 +39,100 @@ export default function Guides() {
   return (
     <div className={styles.guides}>
       {!authReady && <div>Loading...</div>}
-
       {error && (
         <div className={styles.error}>
           <p>{error}</p>
         </div>
       )}
 
-      {guides &&
-        guides.map((guide) => (
-          <div key={guide.title} className={styles.card}>
-            <h3>{guide.title}</h3>
-            <h4>written by {guide.author}</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. At
-              corrupti iste ab magnam dignissimos id maxime rerum quae minima.
-              Delectus maxime culpa est consequatur veritatis, perspiciatis cum
-              corrupti possimus quis?
-            </p>
+      {guides && (
+        <div className="home_contain">
+          <div className="home_header">
+            <h1>Welcome</h1>
           </div>
-        ))}
-      <HomePage />
+          <div className="home_para">
+            <p>Select an option</p>
+          </div>
+          <div className="home_link_contain">
+            {/* navigation to the create route */}
+            <ul className="home_link_block">
+              <li>
+                <Link href="/">
+                  <a>
+                    <AiOutlineEdit
+                      style={{
+                        fontSize: "40px",
+                        fontWeight: "bold",
+                        fill: "#003f47",
+                      }}
+                    />
+                    Book In Form
+                  </a>
+                </Link>
+              </li>
+              <li>
+                {/* navigation to the completedforms route */}
+                <Link to="/">
+                  <a>
+                    <AiFillFolderOpen
+                      style={{
+                        fontSize: "40px",
+                        fontWeight: "bold",
+                        fill: "#003f47",
+                      }}
+                    />
+                    Completed Forms
+                  </a>
+                </Link>
+              </li>
+              <li>
+                {/* navigation to the user defined field route */}
+                <Link href="/"></Link>
+                <a>
+                  <AiOutlineTool
+                    style={{
+                      fontSize: "40px",
+                      fontWeight: "bold",
+                      fill: "#003f47",
+                    }}
+                  />
+                  Inspection Part Details
+                </a>
+              </li>
+              <li>
+                {/* navigation to the completed inspection route */}
+                <Link href="/">
+                  <a>
+                    <AiFillFolderOpen
+                      style={{
+                        fontSize: "40px",
+                        fontWeight: "bold",
+                        fill: "#003f47",
+                      }}
+                    />
+                    Completed Inspection
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/">
+                  {/* navigation to the userdefined field route */}
+                  <a>
+                    <AiOutlineDeliveredProcedure
+                      style={{
+                        fontSize: "40px",
+                        fontWeight: "bold",
+                        fill: "#003f47",
+                      }}
+                    />
+                    Delivery
+                  </a>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

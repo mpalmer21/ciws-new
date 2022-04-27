@@ -2,6 +2,13 @@ import { useContext, useEffect, useState } from "react";
 import styles from "../styles/Guides.module.css";
 import AuthContext from "../stores/authContext";
 import HomePage from "./HomePage";
+import {
+  AiOutlineEdit,
+  AiFillFolderOpen,
+  AiOutlineTool,
+  AiOutlineDeliveredProcedure,
+} from "react-icons/ai";
+import Link from "next/link";
 
 export default function Guides() {
   const { user, authReady, login } = useContext(AuthContext);

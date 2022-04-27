@@ -57,37 +57,34 @@ export default function Guides() {
             {/* navigation to the create route */}
             <ul className="home_link_block">
               <li>
-                <Link href="/">
-                  <a>
-                    <AiOutlineEdit
-                      style={{
-                        fontSize: "40px",
-                        fontWeight: "bold",
-                        fill: "#003f47",
-                      }}
-                    />
-                    Book In Form
-                  </a>
-                </Link>
+                <a>
+                  <AiOutlineEdit
+                    style={{
+                      fontSize: "40px",
+                      fontWeight: "bold",
+                      fill: "#003f47",
+                    }}
+                  />
+                  Book In Form
+                </a>
               </li>
               <li>
                 {/* navigation to the completedforms route */}
-                <Link to="/">
-                  <a>
-                    <AiFillFolderOpen
-                      style={{
-                        fontSize: "40px",
-                        fontWeight: "bold",
-                        fill: "#003f47",
-                      }}
-                    />
-                    Completed Forms
-                  </a>
-                </Link>
+
+                <a>
+                  <AiFillFolderOpen
+                    style={{
+                      fontSize: "40px",
+                      fontWeight: "bold",
+                      fill: "#003f47",
+                    }}
+                  />
+                  Completed Forms
+                </a>
               </li>
               <li>
                 {/* navigation to the user defined field route */}
-                <Link href="/"></Link>
+
                 <a>
                   <AiOutlineTool
                     style={{
@@ -101,33 +98,30 @@ export default function Guides() {
               </li>
               <li>
                 {/* navigation to the completed inspection route */}
-                <Link href="/">
-                  <a>
-                    <AiFillFolderOpen
-                      style={{
-                        fontSize: "40px",
-                        fontWeight: "bold",
-                        fill: "#003f47",
-                      }}
-                    />
-                    Completed Inspection
-                  </a>
-                </Link>
+
+                <a>
+                  <AiFillFolderOpen
+                    style={{
+                      fontSize: "40px",
+                      fontWeight: "bold",
+                      fill: "#003f47",
+                    }}
+                  />
+                  Completed Inspection
+                </a>
               </li>
               <li>
-                <Link href="/">
-                  {/* navigation to the userdefined field route */}
-                  <a>
-                    <AiOutlineDeliveredProcedure
-                      style={{
-                        fontSize: "40px",
-                        fontWeight: "bold",
-                        fill: "#003f47",
-                      }}
-                    />
-                    Delivery
-                  </a>
-                </Link>
+                {/* navigation to the userdefined field route */}
+                <a>
+                  <AiOutlineDeliveredProcedure
+                    style={{
+                      fontSize: "40px",
+                      fontWeight: "bold",
+                      fill: "#003f47",
+                    }}
+                  />
+                  Delivery
+                </a>
               </li>
             </ul>
           </div>

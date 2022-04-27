@@ -13,10 +13,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <AuthContextProvider>
       <Navbar />
-      <Header />
-      <Howto />
-      <Footer />
       <Component {...pageProps} />
+      <Footer />
     </AuthContextProvider>
   );
 }

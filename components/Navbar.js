@@ -77,14 +77,18 @@ const Navbar = () => {
 
           <ul>
             {!user && (
-              <li onClick={login} className="btn">
-                Login/Signup
-              </li>
+              <Link href="/">
+                <button onClick={login} type="button">
+                  login
+                </button>
+              </Link>
             )}
             {user && (
-              <li onClick={logout} className="btn">
-                Logout
-              </li>
+              <Link href="/">
+                <button onClick={logout} type="button">
+                  login
+                </button>
+              </Link>
             )}
           </ul>
         </div>

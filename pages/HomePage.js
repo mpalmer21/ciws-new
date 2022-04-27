@@ -4,7 +4,6 @@ import {
   AiOutlineTool,
   AiOutlineDeliveredProcedure,
 } from "react-icons/ai";
-import "./homepage.css";
 
 const HomePage = () => {
   return (
@@ -19,7 +18,7 @@ const HomePage = () => {
         {/* navigation to the create route */}
         <ul className="home_link_block">
           <li>
-            <a href="/Create">
+            <a href="/">
               <AiOutlineEdit
                 style={{
                   fontSize: "40px",
@@ -32,7 +31,7 @@ const HomePage = () => {
           </li>
           <li>
             {/* navigation to the completedforms route */}
-            <Link to="/CompletedForms">
+            <Link to="/">
               <a>
                 <AiFillFolderOpen
                   style={{
@@ -47,7 +46,7 @@ const HomePage = () => {
           </li>
           <li>
             {/* navigation to the user defined field route */}
-            <a href="/UserDefinedField">
+            <a href="/">
               <AiOutlineTool
                 style={{
                   fontSize: "40px",
@@ -60,7 +59,7 @@ const HomePage = () => {
           </li>
           <li>
             {/* navigation to the completed inspection route */}
-            <a href="/CompletedInspection">
+            <a href="/">
               <AiFillFolderOpen
                 style={{
                   fontSize: "40px",
@@ -73,7 +72,7 @@ const HomePage = () => {
           </li>
           <li>
             {/* navigation to the userdefined field route */}
-            <a href="/Delivery">
+            <a href="/">
               <AiOutlineDeliveredProcedure
                 style={{
                   fontSize: "40px",

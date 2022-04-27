@@ -10,8 +10,8 @@ const Step2 = (props) => {
         <h2>Components Booking In Form</h2>
         <div className="form-step">
           <div className="head">
-            <label for="headType">
-              <strong>Cylinder Head Type:</strong>{" "}
+            <label>
+              <strong>Cylinder Head Type:</strong>
             </label>
             <select
               name="headType"
@@ -21,9 +21,7 @@ const Step2 = (props) => {
               className="form-select center-text"
             >
               {compnametable.map((cylinderheadtype, data) => (
-                <option htmlFor="headType" key={data}>
-                  {cylinderheadtype.headtype}
-                </option>
+                <option key={data}>{cylinderheadtype.headtype}</option>
               ))}
             </select>
           </div>

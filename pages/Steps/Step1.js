@@ -7,14 +7,13 @@ const Step1 = (props) => {
     <div className="create">
       <div>
         <h2>Components Booking In Form</h2>
-        <div class="form-step form-step-active">
-          <label for="worksOrder">
+        <div className="form-step form-step-active">
+          <label>
             <strong>WorkOrder:</strong>
           </label>
           <input
             placeholder="Enter works order number"
             type="text"
-            minlength="1"
             required
             id="worksOrder"
             name="worksOrder"

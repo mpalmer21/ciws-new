@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { UseLocalStorage } from "../UseLocalStorage";
+import { UseLocalStorage } from "../utilities/UseLocalStorage";
 import Step1 from "../Steps/Step1";
 import Step2 from "../Steps/Step2";
 import Step3 from "../Steps/Step3";

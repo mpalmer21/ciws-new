@@ -5,8 +5,6 @@ import {
   AiOutlineTool,
   AiOutlineDeliveredProcedure,
 } from "react-icons/ai";
-// import Link from "next/link";
-
 const HomePage = () => {
   return (
     <div className="home_contain">

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
-import useFetch from "../useFetch";
+import useFetch from "../utilities/useFetch";
 import { Link } from "react-router-dom";
 
 const FormDetails = () => {

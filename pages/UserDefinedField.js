@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { UseLocalStorage } from "../UseLocalStorage";
+import { UseLocalStorage } from "../utilities/UseLocalStorage";
 import Step1 from "../Steps_2/Step1";
 import Step2 from "../Steps_2/Step2";
 import Step3 from "../Steps_2/Step3";
@@ -9,7 +9,6 @@ import Step5 from "../Steps_2/Step5";
 import Step6 from "../Steps_2/Step6";
 import Step7 from "../Steps_2/Step7";
 import FinalStep from "../Steps_2/FinalStep";
-import "./userdefinedfields.css";
 
 const UserDefinedField = () => {
   //

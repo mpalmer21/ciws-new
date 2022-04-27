@@ -3,7 +3,7 @@ import React from "react";
 export default function Howto() {
   return (
     <div className="section__margin">
-      <div className="container_about-lower ">
+      {/* <div className="container_about-lower ">
         <div className="container_about-lower-title">
           <h2>How it Works</h2>
           <div className="container_about-lower-title-line"></div>
@@ -40,7 +40,7 @@ export default function Howto() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

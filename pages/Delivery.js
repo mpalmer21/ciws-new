@@ -1,6 +1,5 @@
 import * as React from "react";
-import useFetch from "../useFetch";
-
+import useFetch from "../utilities/useFetch";
 import { styled } from "@mui/material/styles";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";

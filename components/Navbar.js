@@ -79,6 +79,7 @@ const Navbar = () => {
                 </button>
               </Link>
             )}
+            {user && <li>{user.email}</li>}
             {user && (
               <Link href="/">
                 <button onClick={logout} type="button">

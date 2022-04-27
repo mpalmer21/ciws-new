@@ -71,10 +71,6 @@ const Navbar = () => {
             <p>Resources</p>
           </Link>
 
-          <Link href="/">
-            <button type="button">login</button>
-          </Link>
-
           <ul>
             {!user && (
               <Link href="/">

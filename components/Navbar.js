@@ -67,7 +67,7 @@ const Navbar = () => {
       </div>
       {authReady && (
         <div className="navbar-sign">
-          <Link href="/guides">
+          <Link href="/HomePage">
             <p>Resources</p>
           </Link>
 

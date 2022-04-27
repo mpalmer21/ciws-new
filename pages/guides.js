@@ -1,14 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import styles from "../styles/Guides.module.css";
 import AuthContext from "../stores/authContext";
-import HomePage from "./HomePage";
-import {
-  AiOutlineEdit,
-  AiFillFolderOpen,
-  AiOutlineTool,
-  AiOutlineDeliveredProcedure,
-} from "react-icons/ai";
-import Link from "next/link";
 
 export default function Guides() {
   const { user, authReady, login } = useContext(AuthContext);
@@ -52,88 +44,19 @@ export default function Guides() {
         </div>
       )}
 
-      {guides && (
-        <div className="home_contain">
-          <div className="home_header">
-            <h1>Welcome</h1>
+      {guides &&
+        guides.map((guide) => (
+          <div key={guide.title} className={styles.card}>
+            <h3>{guide.title}</h3>
+            <h4>written by {guide.author}</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. At
+              corrupti iste ab magnam dignissimos id maxime rerum quae minima.
+              Delectus maxime culpa est consequatur veritatis, perspiciatis cum
+              corrupti possimus quis?
+            </p>
           </div>
-          <div className="home_para">
-            <p>Select an option</p>
-          </div>
-          <div className="home_link_contain">
-            {/* navigation to the create route */}
-            <ul className="home_link_block">
-              <li>
-                <a>
-                  <AiOutlineEdit
-                    style={{
-                      fontSize: "40px",
-                      fontWeight: "bold",
-                      fill: "#003f47",
-                    }}
-                  />
-                  Book In Form
-                </a>
-              </li>
-              <li>
-                {/* navigation to the completedforms route */}
-
-                <a>
-                  <AiFillFolderOpen
-                    style={{
-                      fontSize: "40px",
-                      fontWeight: "bold",
-                      fill: "#003f47",
-                    }}
-                  />
-                  Completed Forms
-                </a>
-              </li>
-              <li>
-                {/* navigation to the user defined field route */}
-
-                <a>
-                  <AiOutlineTool
-                    style={{
-                      fontSize: "40px",
-                      fontWeight: "bold",
-                      fill: "#003f47",
-                    }}
-                  />
-                  Inspection Part Details
-                </a>
-              </li>
-              <li>
-                {/* navigation to the completed inspection route */}
-
-                <a>
-                  <AiFillFolderOpen
-                    style={{
-                      fontSize: "40px",
-                      fontWeight: "bold",
-                      fill: "#003f47",
-                    }}
-                  />
-                  Completed Inspection
-                </a>
-              </li>
-              <li>
-                {/* navigation to the userdefined field route */}
-                <a>
-                  <AiOutlineDeliveredProcedure
-                    style={{
-                      fontSize: "40px",
-                      fontWeight: "bold",
-                      fill: "#003f47",
-                    }}
-                  />
-                  Delivery
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      )}
+        ))}
     </div>
   );
 }

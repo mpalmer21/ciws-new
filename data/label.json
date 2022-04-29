@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "type": "text",
+        "text":  "Customer Name:",
+        "textname": "customerName"    
+    },
+    {
+        "id": 3,
+        "type": "text",
+        "text":  "Parts recieved from:",
+        "textname": "partsRecievedFrom"
+    },
+    {
+        "id": 5,
+        "type": "text",
+        "text":  "Customer Supply or CISW Purchase components:",
+        "textname": "customerSupply"
+    },
+    {
+        "id": 6,
+        "type": "number",
+        "text":  "Purchase Order Number:",
+        "textname":"purchaseOrderNumber"
+        }
+]

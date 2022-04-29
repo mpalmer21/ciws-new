@@ -5,6 +5,9 @@ import "../styles/navbar.css";
 import "../styles/header.css";
 import "../styles/howto.css";
 import "../styles/footer.css";
+import "../styles/create.css";
+import "../styles/homepage.css";
+import "../styles/userdefinedfields.css";
 
 import Footer from "../components/Footer";
 
@@ -13,7 +16,6 @@ function MyApp({ Component, pageProps }) {
     <AuthContextProvider>
       <Navbar />
       <Component {...pageProps} />
-      <Footer />
     </AuthContextProvider>
   );
 }

@@ -65,31 +65,30 @@ const Navbar = () => {
         </div>
         <div className="navbar-links_container"></div>
       </div>
-      {authReady && (
-        <div className="navbar-sign">
-          <Link href="/guides">
-            <p>Resources</p>
-          </Link>
+      {/* {authReady && ( */}
+      <div className="navbar-sign">
+        <Link href="/guides">
+          <p>Resources</p>
+        </Link>
 
-          <ul>
-            {!user && (
-              <Link href="/">
-                <button onClick={login} type="button">
-                  login
-                </button>
-              </Link>
-            )}
-            {user && <li>{user.email}</li>}
-            {user && (
-              <Link href="/">
-                <button onClick={logout} type="button">
-                  log out
-                </button>
-              </Link>
-            )}
-          </ul>
-        </div>
-      )}
+        <ul>
+          {!user && (
+            <Link href="/">
+              <button onClick={login} type="button">
+                login
+              </button>
+            </Link>
+          )}
+
+          {user && (
+            <Link href="/">
+              <button onClick={logout} type="button">
+                log out
+              </button>
+            </Link>
+          )}
+        </ul>
+      </div>
     </div>
   );
 };

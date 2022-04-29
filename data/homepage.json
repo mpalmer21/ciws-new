@@ -1,0 +1,27 @@
+[
+    {
+        "class": "list-group-item  mb-4 ",
+        "href":  "/BookInForm",
+        "text":  "Book In Form"
+
+    },
+    {
+        "class": "list-group-item mb-4 ",
+        "href":  "/IncomingJobs",
+        "text":  "IncomingJobs"
+
+    },
+    {
+        "class": "list-group-item mb-4 ",
+        "href":  "/Labels",
+        "text":  "Labels"
+
+    },
+    {
+        "class": "list-group-item mb-4 ",
+        "href":  "/Inspect",
+        "text":  "Inspect"
+
+    }
+
+]

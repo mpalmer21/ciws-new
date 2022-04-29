@@ -1,10 +1,6 @@
 /* Progressbar */
 
-.home_contain{
-    border-radius: 30px;
-    border: 1px solid #ffffff;
-    box-shadow: rgba(4, 17, 29, 0.25) 0px 0px 8px 0px;
-  }
+
   
   .multistep-form h1{
       text-align: center;
@@ -153,14 +149,18 @@
     }
     
     .user {
-      animation: slideInFromBottom 1s ease-in;
-      box-shadow: 0 1px 3px 0 #000000;
-      background-color: rgb(255, 255, 255);
-      border-radius: 10px;
-      text-align: center;
-      padding: 10px 16px;
-      margin: 2px 0;
-      border-bottom: 1px solid #fafafa;
+      max-width: 960px;
+      margin: 40px auto;
+      letter-spacing: 1px;
+      line-height: 1.6em; 
+    
+    box-shadow: 0 1px 3px 0 #000000;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    text-align: center;
+    /* padding: 10px 16px;
+    margin: 2px 0; */
+    border-bottom: 1px solid #fafafa;
     }
     
     .user:hover {

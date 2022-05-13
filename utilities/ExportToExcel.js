@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import * as FileSaver from "file-saver";
 import * as XLSX from "xlsx";
 
@@ -16,6 +16,11 @@ export const ExportToExcel = ({ apiData, fileName }) => {
   };
 
   return (
-    <button className='btn btn-secondary btn-lg' onClick={(e) => exportToCSV(apiData, fileName)}>Export</button>
+    <button
+      className="btn btn-secondary btn-lg"
+      onClick={(e) => exportToCSV(apiData, fileName)}
+    >
+      Export
+    </button>
   );
 };

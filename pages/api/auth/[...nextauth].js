@@ -6,7 +6,7 @@ import clientPromise from "./lib/mongodb";
 import bcrypt from "bcrypt";
 
 // import Users from "../../../models/userModel";
-import { signIn } from "next-auth/react";
+
 import connectDB from "./lib/connectDB";
 import Users from "../../../models/userModel";
 

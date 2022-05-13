@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-import { AuthContextProvider } from "../stores/authContext";
+
 import "../styles/globals.css";
 import "../styles/completedform.css";
 import "../styles/navbar.css";

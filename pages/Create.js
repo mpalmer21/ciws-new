@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import AuthContext from "../stores/authContext";
+
 import connectDB from "../lib/connectDB";
 import { useRouter } from "next/router";
 // import { UseLocalStorage } from "../utilities/UseLocalStorage";

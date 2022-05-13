@@ -1,7 +1,6 @@
 import dbConnect from "../../../lib/connectDB";
 import { getSession } from "next-auth/react";
 import Part from "../../../models/partModel";
-import handler from "../register";
 
 dbConnect();
 

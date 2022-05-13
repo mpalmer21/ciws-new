@@ -6,9 +6,9 @@ dbConnect();
 
 export default async function handler(req, res) {
   const session = await getSession({ req });
-  const { method } = req;
 
   if (session) {
+    const { method } = req;
     switch (method) {
       case "GET":
         try {

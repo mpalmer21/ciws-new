@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-
+import { useSession, signIn, signOut } from "next-auth/react";
 import connectDB from "../lib/connectDB";
 import { useRouter } from "next/router";
 // import { UseLocalStorage } from "../utilities/UseLocalStorage";
@@ -165,90 +165,98 @@ const Create = () => {
 
   //props to handle events and store value are passed down
 
-  return (
-    <div>
-      <div className="multistep-form">
-        <h1>Book In Form</h1>
-      </div>
+  const { data: session } = useSession();
+  if (session) {
+    return (
+      <div>
+        <div className="multistep-form">
+          <h1>Book In Form</h1>
+        </div>
 
-      {
         {
-          1: (
-            <Step1
-              handleChange={handleChange}
-              data={values}
-              nextStep={nextStep}
-              step={step}
-            />
-          ),
-          2: (
-            <Step2
-              handleChange={handleChange}
-              data={values}
-              prevStep={prevStep}
-              nextStep={nextStep}
-              step={step}
-            />
-          ),
-          3: (
-            <Step3
-              handleChange={handleChange}
-              data={values}
-              prevStep={prevStep}
-              nextStep={nextStep}
-              step={step}
-            />
-          ),
-          4: (
-            <Step4
-              handleChange={handleChange}
-              data={values}
-              prevStep={prevStep}
-              nextStep={nextStep}
-              step={step}
-            />
-          ),
-          5: (
-            <Step5
-              handleChange={handleChange}
-              data={values}
-              prevStep={prevStep}
-              nextStep={nextStep}
-              step={step}
-            />
-          ),
-          6: (
-            <Step6
-              handleChange={handleChange}
-              data={values}
-              prevStep={prevStep}
-              nextStep={nextStep}
-              step={step}
-            />
-          ),
-          7: (
-            <Step7
-              handleChange={handleChange}
-              data={values}
-              prevStep={prevStep}
-              nextStep={nextStep}
-              step={step}
-            />
-          ),
-          8: (
-            <FinalStep
-              handleChange={handleChange}
-              data={values}
-              handleSubmit={handleSubmit}
-              prevStep={prevStep}
-              nextStep={nextStep}
-              step={step}
-            />
-          ),
-        }[step]
-      }
-    </div>
+          {
+            1: (
+              <Step1
+                handleChange={handleChange}
+                data={values}
+                nextStep={nextStep}
+                step={step}
+              />
+            ),
+            2: (
+              <Step2
+                handleChange={handleChange}
+                data={values}
+                prevStep={prevStep}
+                nextStep={nextStep}
+                step={step}
+              />
+            ),
+            3: (
+              <Step3
+                handleChange={handleChange}
+                data={values}
+                prevStep={prevStep}
+                nextStep={nextStep}
+                step={step}
+              />
+            ),
+            4: (
+              <Step4
+                handleChange={handleChange}
+                data={values}
+                prevStep={prevStep}
+                nextStep={nextStep}
+                step={step}
+              />
+            ),
+            5: (
+              <Step5
+                handleChange={handleChange}
+                data={values}
+                prevStep={prevStep}
+                nextStep={nextStep}
+                step={step}
+              />
+            ),
+            6: (
+              <Step6
+                handleChange={handleChange}
+                data={values}
+                prevStep={prevStep}
+                nextStep={nextStep}
+                step={step}
+              />
+            ),
+            7: (
+              <Step7
+                handleChange={handleChange}
+                data={values}
+                prevStep={prevStep}
+                nextStep={nextStep}
+                step={step}
+              />
+            ),
+            8: (
+              <FinalStep
+                handleChange={handleChange}
+                data={values}
+                handleSubmit={handleSubmit}
+                prevStep={prevStep}
+                nextStep={nextStep}
+                step={step}
+              />
+            ),
+          }[step]
+        }
+      </div>
+    );
+  }
+  return (
+    <>
+      Content protected sign in to access <br />
+      <button onClick={() => signIn()}>Sign in</button>
+    </>
   );
 };
-
 export default Create;

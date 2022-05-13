@@ -36,60 +36,71 @@ export default function Delivery() {
     "https://sheet.best/api/sheets/18a97a45-6208-4683-8253-602409736389"
   );
 
+  const { data: session } = useSession();
+  if (session) {
+    return (
+      <TableContainer component={Paper}>
+        <Table aria-label="simple table">
+          <TableHead className="id={`heading${i}`}">
+            <TableRow>
+              <StyledTableCell align="right">Customer</StyledTableCell>
+              <StyledTableCell align="right">Job ref</StyledTableCell>
+              <StyledTableCell align="right">Date out</StyledTableCell>
+              <StyledTableCell align="right">Revised Date out</StyledTableCell>
+              <StyledTableCell align="right">Work Late/Early</StyledTableCell>
+              <StyledTableCell align="right">
+                Remaining Time to Complete Work:
+              </StyledTableCell>
+              <StyledTableCell align="right">Head type</StyledTableCell>
+              <StyledTableCell align="right">Part Details</StyledTableCell>
+              <StyledTableCell align="right">Position</StyledTableCell>
+              <StyledTableCell align="right">Box</StyledTableCell>
+              <StyledTableCell align="right">
+                Completed Job Pack Received
+              </StyledTableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {data?.map((item, i) => (
+              <StyledTableRow
+                key={item.name}
+                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+              >
+                <StyledTableCell align="right">{item.Customer}</StyledTableCell>
+                <StyledTableCell align="right">{item.Job_ref}</StyledTableCell>
+                <StyledTableCell align="right">{item.Date_out}</StyledTableCell>
+                <StyledTableCell align="right">
+                  {item.Revised_Date_out}
+                </StyledTableCell>
+                <StyledTableCell align="right">
+                  {item.Work_Late_Early}
+                </StyledTableCell>
+                <StyledTableCell align="right">
+                  {item.Remaining_Time_to_Complete_Work}
+                </StyledTableCell>
+                <StyledTableCell align="right">
+                  {item.Head_type}
+                </StyledTableCell>
+                <StyledTableCell align="right">
+                  {item.Part_Details}
+                </StyledTableCell>
+                <StyledTableCell align="right">{item.Position}</StyledTableCell>
+                <StyledTableCell align="right">{item.Box}</StyledTableCell>
+                <StyledTableCell align="right">
+                  {item.Completed_Job_Pack_Received}
+                </StyledTableCell>
+              </StyledTableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    );
+  }
   return (
-    <TableContainer component={Paper}>
-      <Table aria-label="simple table">
-        <TableHead className="id={`heading${i}`}">
-          <TableRow>
-            <StyledTableCell align="right">Customer</StyledTableCell>
-            <StyledTableCell align="right">Job ref</StyledTableCell>
-            <StyledTableCell align="right">Date out</StyledTableCell>
-            <StyledTableCell align="right">Revised Date out</StyledTableCell>
-            <StyledTableCell align="right">Work Late/Early</StyledTableCell>
-            <StyledTableCell align="right">
-              Remaining Time to Complete Work:
-            </StyledTableCell>
-            <StyledTableCell align="right">Head type</StyledTableCell>
-            <StyledTableCell align="right">Part Details</StyledTableCell>
-            <StyledTableCell align="right">Position</StyledTableCell>
-            <StyledTableCell align="right">Box</StyledTableCell>
-            <StyledTableCell align="right">
-              Completed Job Pack Received
-            </StyledTableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {data?.map((item, i) => (
-            <StyledTableRow
-              key={item.name}
-              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-            >
-              <StyledTableCell align="right">{item.Customer}</StyledTableCell>
-              <StyledTableCell align="right">{item.Job_ref}</StyledTableCell>
-              <StyledTableCell align="right">{item.Date_out}</StyledTableCell>
-              <StyledTableCell align="right">
-                {item.Revised_Date_out}
-              </StyledTableCell>
-              <StyledTableCell align="right">
-                {item.Work_Late_Early}
-              </StyledTableCell>
-              <StyledTableCell align="right">
-                {item.Remaining_Time_to_Complete_Work}
-              </StyledTableCell>
-              <StyledTableCell align="right">{item.Head_type}</StyledTableCell>
-              <StyledTableCell align="right">
-                {item.Part_Details}
-              </StyledTableCell>
-              <StyledTableCell align="right">{item.Position}</StyledTableCell>
-              <StyledTableCell align="right">{item.Box}</StyledTableCell>
-              <StyledTableCell align="right">
-                {item.Completed_Job_Pack_Received}
-              </StyledTableCell>
-            </StyledTableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+    <>
+      Content protected sign in to access <br />
+      <button onClick={() => signIn()}>Sign in</button>
+    </>
   );
 }
 

@@ -101,7 +101,7 @@ export default function Guides() {
   }
   return (
     <>
-      Not signed in <br />
+      Content protected sign in to access <br />
       <button onClick={() => signIn()}>Sign in</button>
     </>
   );

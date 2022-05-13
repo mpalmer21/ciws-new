@@ -44,7 +44,7 @@ const UserDefinedField = () => {
 
     const newForm = { ...values2 };
 
-    await fetch(`http://localhost:3000/api/part`, {
+    await fetch(`/api/part`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newForm),

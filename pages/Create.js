@@ -13,6 +13,7 @@ import Step7 from "../Steps/Step7";
 import FinalStep from "../Steps/FinalStep";
 
 const Create = () => {
+  const router = useRouter();
   const [values, setValues] = useState({}); //local storage to save user input
 
   const [step, setStep] = useState(1); //setting initial state to 1 which corresponds to Step 1
@@ -46,7 +47,7 @@ const Create = () => {
 
     const newForm = { ...values };
 
-    await fetch(`http://localhost:3000/api/form`, {
+    await fetch(`/api/form`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newForm),

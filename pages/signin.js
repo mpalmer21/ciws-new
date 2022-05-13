@@ -157,12 +157,3 @@ export async function getServerSideProps(context) {
     },
   };
 }
-
-/*
-// If older than Next.js 9.3
-SignIn.getInitialProps = async (context) => {
-  return {
-    csrfToken: await getCsrfToken(context)
-  }
-}
-*/

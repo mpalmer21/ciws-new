@@ -1,10 +1,11 @@
 import dbConnect from "../../../lib/connectDB";
 import { getSession } from "next-auth/react";
 import Part from "../../../models/partModel";
+import handler from "../register";
 
 dbConnect();
 
-export default async (req, res) => {
+export default async function handler(req, res) {
   const session = await getSession({ req });
   const {
     query: { id },
@@ -65,4 +66,4 @@ export default async (req, res) => {
     res.status(401);
   }
   res.end();
-};
+}

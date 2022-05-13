@@ -4,7 +4,7 @@ import { getSession } from "next-auth/react";
 
 dbConnect();
 
-export default async (req, res) => {
+export default async function handler(req, res) {
   const session = await getSession({ req });
   const { method } = req;
 
@@ -38,4 +38,4 @@ export default async (req, res) => {
     res.status(401);
   }
   res.end();
-};
+}

@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const PartSchema = new mongoose.Schema(
   {
@@ -129,4 +129,4 @@ const PartSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.models.Part || mongoose.model("Part", PartSchema);
+export default mongoose.models.Part || mongoose.model("Part", PartSchema);

@@ -8,6 +8,7 @@ import Step5 from "../Steps_2/Step5";
 import Step6 from "../Steps_2/Step6";
 import Step7 from "../Steps_2/Step7";
 import FinalStep from "../Steps_2/FinalStep";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 const UserDefinedField = () => {
   //
@@ -44,14 +45,14 @@ const UserDefinedField = () => {
 
     const newForm = { ...values2 };
 
-    await fetch(`/parts`, {
+    await fetch(`http://localhost:3000/api/part`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newForm),
     }).then(() => {
       console.log(newForm);
       // history.go(-1);
-      history.push("/");
+
       alert("Your file is being uploaded!");
       window.localStorage.clear();
     });

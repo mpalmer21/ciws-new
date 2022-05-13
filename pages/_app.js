@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import { AuthContextProvider } from "../stores/authContext";
 import "../styles/globals.css";
+import "../styles/completedform.css";
 import "../styles/navbar.css";
 import "../styles/header.css";
 import "../styles/howto.css";
@@ -11,13 +12,19 @@ import "../styles/userdefinedfields.css";
 
 import Footer from "../components/Footer";
 
-function MyApp({ Component, pageProps }) {
+// pages/_app.js
+import { SessionProvider } from "next-auth/react";
+
+import "../styles/globals.css";
+
+export default function App({
+  Component,
+  pageProps: { session, ...pageProps },
+}) {
   return (
-    <AuthContextProvider>
+    <SessionProvider session={session}>
       <Navbar />
       <Component {...pageProps} />
-    </AuthContextProvider>
+    </SessionProvider>
   );
 }
-
-export default MyApp;

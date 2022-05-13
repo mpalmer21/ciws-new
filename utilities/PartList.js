@@ -2,36 +2,38 @@ import Link from "next/link";
 import { ExportToExcel } from "../utilities/ExportToExcel";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { useSession, signIn, signOut } from "next-auth/react";
+
+export const getStaticProps = async () => {
+  const res = await fetch(`http://localhost:3000/api/part`);
+  const parts = await res.json();
+
+  return {
+    props: {
+      parts: JSON.parse(JSON.stringify(parts)),
+    },
+  };
+};
 
 const PartList = ({ parts }) => {
-  const [data, setData] = useState([]);
-  const fileName = "Progress plus import"; // filename for excel file
-
-  useEffect(() => {
-    const fetchData = () => {
-      axios.get(`/parts`).then((r) => setData(r.data));
-    };
-    fetchData();
-  }, []);
-
+  console.log(parts);
   return (
     <div>
-      <div className="App">
-        <ExportToExcel apiData={data} fileName={fileName} />
-      </div>
+      <div className="App"></div>
       <div className="form-list">
         {/* filter by parts id */}
-        {parts.map((part, key) => {
+        {parts.map((part) => {
           return (
             <div className="form-preview" key={part._id}>
-              <Link to={`/parts/${part._id}`}>
-                <h2>uiqueId: {part.uiqueId}</h2>
-                <p>stampCasting: {part.stampCastinge}</p>
-                <p>blast: {part.blast}</p>
-              </Link>
+              {/* <Link to={`/api/parts/${part._id}`}> */}
+              <h2>uiqueId: {part.uiqueId}</h2>
+              <p>stampCasting: {part.stampCastinge}</p>
+              <p>blast: {part.blast}</p>
+              {/* </Link> */}
             </div>
           );
         })}
+        )
       </div>
     </div>
   );

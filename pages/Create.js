@@ -1,5 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import AuthContext from "../stores/authContext";
+import connectDB from "../lib/connectDB";
+import { useRouter } from "next/router";
 // import { UseLocalStorage } from "../utilities/UseLocalStorage";
 import Step1 from "../Steps/Step1";
 import Step2 from "../Steps/Step2";
@@ -11,9 +13,6 @@ import Step7 from "../Steps/Step7";
 import FinalStep from "../Steps/FinalStep";
 
 const Create = () => {
-  const { user, authReady, login } = useContext(AuthContext);
-  const [guides, setGuides] = useState(null);
-  const [error, setError] = useState(null);
   const [values, setValues] = useState({}); //local storage to save user input
 
   const [step, setStep] = useState(1); //setting initial state to 1 which corresponds to Step 1
@@ -47,13 +46,13 @@ const Create = () => {
 
     const newForm = { ...values };
 
-    await fetch(`/forms`, {
+    await fetch(`http://localhost:3000/api/form`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newForm),
     }).then(() => {
-      // history.go(-1);
-      history.push("/");
+      router.push("/");
+
       alert("Your file is being uploaded!");
       window.localStorage.clear();
     });
@@ -168,96 +167,86 @@ const Create = () => {
 
   return (
     <div>
-      {!user && <div>Content Protected log in to view</div>}
-      {error && (
-        <div className={styles.error}>
-          <p>{error}</p>
-        </div>
-      )}
-      {user && (
-        <div>
-          <div className="multistep-form">
-            <h1>Book In Form</h1>
-          </div>
+      <div className="multistep-form">
+        <h1>Book In Form</h1>
+      </div>
 
-          {
-            {
-              1: (
-                <Step1
-                  handleChange={handleChange}
-                  data={values}
-                  nextStep={nextStep}
-                  step={step}
-                />
-              ),
-              2: (
-                <Step2
-                  handleChange={handleChange}
-                  data={values}
-                  prevStep={prevStep}
-                  nextStep={nextStep}
-                  step={step}
-                />
-              ),
-              3: (
-                <Step3
-                  handleChange={handleChange}
-                  data={values}
-                  prevStep={prevStep}
-                  nextStep={nextStep}
-                  step={step}
-                />
-              ),
-              4: (
-                <Step4
-                  handleChange={handleChange}
-                  data={values}
-                  prevStep={prevStep}
-                  nextStep={nextStep}
-                  step={step}
-                />
-              ),
-              5: (
-                <Step5
-                  handleChange={handleChange}
-                  data={values}
-                  prevStep={prevStep}
-                  nextStep={nextStep}
-                  step={step}
-                />
-              ),
-              6: (
-                <Step6
-                  handleChange={handleChange}
-                  data={values}
-                  prevStep={prevStep}
-                  nextStep={nextStep}
-                  step={step}
-                />
-              ),
-              7: (
-                <Step7
-                  handleChange={handleChange}
-                  data={values}
-                  prevStep={prevStep}
-                  nextStep={nextStep}
-                  step={step}
-                />
-              ),
-              8: (
-                <FinalStep
-                  handleChange={handleChange}
-                  data={values}
-                  handleSubmit={handleSubmit}
-                  prevStep={prevStep}
-                  nextStep={nextStep}
-                  step={step}
-                />
-              ),
-            }[step]
-          }
-        </div>
-      )}
+      {
+        {
+          1: (
+            <Step1
+              handleChange={handleChange}
+              data={values}
+              nextStep={nextStep}
+              step={step}
+            />
+          ),
+          2: (
+            <Step2
+              handleChange={handleChange}
+              data={values}
+              prevStep={prevStep}
+              nextStep={nextStep}
+              step={step}
+            />
+          ),
+          3: (
+            <Step3
+              handleChange={handleChange}
+              data={values}
+              prevStep={prevStep}
+              nextStep={nextStep}
+              step={step}
+            />
+          ),
+          4: (
+            <Step4
+              handleChange={handleChange}
+              data={values}
+              prevStep={prevStep}
+              nextStep={nextStep}
+              step={step}
+            />
+          ),
+          5: (
+            <Step5
+              handleChange={handleChange}
+              data={values}
+              prevStep={prevStep}
+              nextStep={nextStep}
+              step={step}
+            />
+          ),
+          6: (
+            <Step6
+              handleChange={handleChange}
+              data={values}
+              prevStep={prevStep}
+              nextStep={nextStep}
+              step={step}
+            />
+          ),
+          7: (
+            <Step7
+              handleChange={handleChange}
+              data={values}
+              prevStep={prevStep}
+              nextStep={nextStep}
+              step={step}
+            />
+          ),
+          8: (
+            <FinalStep
+              handleChange={handleChange}
+              data={values}
+              handleSubmit={handleSubmit}
+              prevStep={prevStep}
+              nextStep={nextStep}
+              step={step}
+            />
+          ),
+        }[step]
+      }
     </div>
   );
 };

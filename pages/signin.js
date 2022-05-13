@@ -81,7 +81,6 @@ export default function SignIn({ csrfToken, providers }) {
                       onChange={(e) => setPassword(e.target.value)}
                       className="w-full px-4 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
                       placeholder=""
-                      type="password"
                     />
                   </div>
                   <p className="mt-4">

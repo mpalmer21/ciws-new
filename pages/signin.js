@@ -6,6 +6,39 @@ import {
 } from "next-auth/react";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import * as React from "react";
+import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
+import CssBaseline from "@mui/material/CssBaseline";
+import TextField from "@mui/material/TextField";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+import Link from "@mui/material/Link";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+function Copyright(props) {
+  return (
+    <Typography
+      variant="body2"
+      color="text.secondary"
+      align="center"
+      {...props}
+    >
+      {"Copyright © "}
+      <Link color="inherit" href="https://mui.com/">
+        CIWS
+      </Link>{" "}
+      {new Date().getFullYear()}
+      {"."}
+    </Typography>
+  );
+}
+const theme = createTheme();
 
 export default function SignIn({ csrfToken, providers }) {
   const Router = useRouter();
@@ -47,79 +80,95 @@ export default function SignIn({ csrfToken, providers }) {
   };
   return (
     <>
-      <form>
-        <div className="flex items-center min-h-screen bg-gray-50">
-          <input name="csrfToken" type="hidden" defaultValue={csrfToken} />
-          <div className="flex-1 h-full max-w-4xl mx-auto bg-white rounded-lg shadow-xl">
-            <div className="flex flex-col md:flex-row">
-              <div className="h-32 md:h-auto md:w-1/2"></div>
-              <div className="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
-                <div className="w-full">
-                  <div className="flex justify-center"></div>
-                  <h1 className="mb-4 text-2xl font-bold text-center text-gray-700">
-                    Login to Your Account
-                  </h1>
-                  <div>
-                    <label className="block text-sm">Email</label>
-                    <input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      className="w-full px-4 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
-                      placeholder=""
-                    />
-                  </div>
-                  <div>
-                    <label className="block mt-4 text-sm">Password</label>
-                    <input
-                      name="password"
-                      id="password"
-                      type="password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      className="w-full px-4 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
-                      placeholder=""
-                    />
-                  </div>
-                  <p className="mt-4">
-                    <a
-                      className="text-sm text-blue-600 hover:underline"
-                      href="./forgot-password.html"
-                    >
-                      Forgot your password?
-                    </a>
-                  </p>
-                  <p>{message}</p>
-
-                  <button
-                    onClick={(e) => signinUser(e)}
-                    type="submit"
-                    className="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue"
-                    href="#"
-                  >
-                    Log in
-                  </button>
-
-                  <button
-                    type="submit"
-                    className="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue"
-                    href="#"
-                    onClick={(e) => signupUser(e)}
-                  >
-                    Sign up
-                  </button>
-
-                  <hr className="my-8" />
-
-                  <div className="flex items-center justify-center gap-4"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </form>
+      <TextField
+        input
+        name="csrfToken"
+        type="hidden"
+        defaultValue={csrfToken}
+      />
+      {/* <input name="csrfToken" type="hidden" defaultValue={csrfToken} /> */}
+      <ThemeProvider theme={theme}>
+        <Container component="main" maxWidth="xs">
+          <CssBaseline />
+          <Box
+            sx={{
+              marginTop: 8,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+              <LockOutlinedIcon />
+            </Avatar>
+            <Typography component="h1" variant="h5">
+              Sign in
+            </Typography>
+            <Box component="form" noValidate sx={{ mt: 1 }}>
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                id="email"
+                name="email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                autoComplete="email"
+                autoFocus
+              />
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                name="password"
+                id="password"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                autoComplete="current-password"
+              />
+              <FormControlLabel
+                control={<Checkbox value="remember" color="primary" />}
+                label="Remember me"
+              />
+              <Button
+                onClick={(e) => signinUser(e)}
+                href="#"
+                type="submit"
+                fullWidth
+                variant="contained"
+                sx={{ mt: 3, mb: 2 }}
+              >
+                Sign In
+              </Button>
+              <Button
+                onClick={(e) => signupUser(e)}
+                type="submit"
+                href="#"
+                fullWidth
+                variant="contained"
+                sx={{ mt: 3, mb: 2 }}
+              >
+                Sign up
+              </Button>
+              <Grid container>
+                <Grid item xs>
+                  <Link href="#" variant="body2">
+                    Forgot password?
+                  </Link>
+                </Grid>
+                <Grid item>
+                  <Link href="#" variant="body2">
+                    {"Don't have an account? Sign Up"}
+                  </Link>
+                </Grid>
+              </Grid>
+            </Box>
+          </Box>
+          <Copyright sx={{ mt: 8, mb: 4 }} />
+        </Container>
+      </ThemeProvider>
 
       {Object.values(providers).map((provider) => {
         if (provider.name === "Email" || provider.name === "Credentials") {

@@ -7,6 +7,7 @@ import axios from "axios";
 import { useSession, signIn, signOut } from "next-auth/react";
 
 const CompletedInspection = ({ parts }) => {
+  if (typeof window === "undefined") return null;
   console.log(parts);
   const [data, setData] = useState([]);
   const fileName = "Progress plus import"; // filename for excel file
@@ -31,7 +32,7 @@ const CompletedInspection = ({ parts }) => {
             parts.map((part) => {
               return (
                 <div className="form-preview" key={part._id}>
-                  <Link href={`/Parts/${part._id}`}>
+                  <Link href={`/part/${part._id}`}>
                     <a>
                       <h2>uiqueId: {part.uiqueId}</h2>
                       <p>stampCasting: {part.stampCasting}</p>

@@ -1,5 +1,4 @@
 import Navbar from "../components/Navbar";
-
 import "../styles/globals.css";
 import "../styles/completedform.css";
 import "../styles/navbar.css";
@@ -24,7 +23,7 @@ export default function App({
   return (
     <SessionProvider session={session}>
       <Navbar />
-      <Component {...pageProps} />
+      <Component className="gradient__bg" {...pageProps} />
     </SessionProvider>
   );
 }

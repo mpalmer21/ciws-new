@@ -15,7 +15,7 @@ const CompletedFormn = ({ forms }) => {
             forms.map((form) => {
               return (
                 <div className="form-preview" key={form._id}>
-                  <Link href={`/forms/${form._id}`}>
+                  <Link href={`/form/${form._id}`}>
                     <a>
                       <h2>worksOrder: {form.worksOrder}</h2>
                       <p>headType: {form.headType}</p>
@@ -46,14 +46,5 @@ export async function getServerSideProps() {
   const result = await Form.find({});
 
   const forms = JSON.parse(JSON.stringify(result));
-  // const filtered = forms.map((form) => {
-  //   return {
-  //     _id: form._id,
-  //     uiqueId: form.uiqueId,
-  //     stampCasting: form.stampCasting,
-  //     blast: form.blast,
-  //   };
-  // });
-
   return { props: { forms: forms } };
 }

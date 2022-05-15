@@ -39,7 +39,7 @@ export default function Guides() {
               </Link>
             </li>
             <li>
-              <Link href={"/Forms"}>
+              <Link href={"/form"}>
                 <a>
                   <AiFillFolderOpen
                     style={{
@@ -67,7 +67,7 @@ export default function Guides() {
               </Link>
             </li>
             <li>
-              <Link href={"/Parts"}>
+              <Link href={"/part"}>
                 <a>
                   <AiFillFolderOpen
                     style={{

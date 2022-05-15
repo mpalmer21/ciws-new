@@ -7,14 +7,21 @@ const ContactUs = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm("", "", form.current, "").then(
-      (result) => {
-        console.log(result.text);
-      },
-      (error) => {
-        console.log(error.text);
-      }
-    );
+    emailjs
+      .sendForm(
+        "service_10vg1fh",
+        "template_e6p8b5h",
+        form.current,
+        "3ymUBOqrOlyDsYSVp"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
     alert("Your email is sent now submit form!");
     window.localStorage.clear();
   };

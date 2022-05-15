@@ -7,7 +7,6 @@ import axios from "axios";
 import { useSession, signIn, signOut } from "next-auth/react";
 
 const CompletedInspection = ({ parts }) => {
-  if (typeof window === "undefined") return null;
   console.log(parts);
   const [data, setData] = useState([]);
   const fileName = "Progress plus import"; // filename for excel file

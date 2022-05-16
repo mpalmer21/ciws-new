@@ -23,7 +23,8 @@ export default function App({
   return (
     <SessionProvider session={session}>
       <Navbar />
-      <Component className="gradient__bg" {...pageProps} />
+
+      <Component {...pageProps} />
     </SessionProvider>
   );
 }

@@ -13,7 +13,7 @@ const CompletedInspection = ({ parts }) => {
   // const { error, isPending, data: parts } = useFetch(`/api/part`);
   useEffect(() => {
     const fetchData = () => {
-      axios.get(`http://localhost:3000/api/part`).then((r) => setData(r.data));
+      axios.get(`/api/part`).then((r) => setData(r.data));
     };
     fetchData();
   }, []);
@@ -21,7 +21,7 @@ const CompletedInspection = ({ parts }) => {
   const { data: session } = useSession();
   if (session) {
     return (
-      <div>
+      <div className="gradient__bg">
         <div className="App">
           <ExportToExcel apiData={data} fileName={fileName} />
         </div>
@@ -46,10 +46,10 @@ const CompletedInspection = ({ parts }) => {
     );
   }
   return (
-    <>
+    <div className="gradient__bg">
       Not signed in <br />
       <button onClick={() => signIn()}>Sign in</button>
-    </>
+    </div>
   );
 };
 

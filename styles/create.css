@@ -9,7 +9,6 @@
 
 
 .multistep-form h1{
-  margin-top: 5rem;
     text-align: center;
     color: #003f47;
     
@@ -157,17 +156,12 @@
   
   .create {
     
-      max-width: 960px;
-      margin: 60px auto;
-      letter-spacing: 1px;
-      line-height: 1.6em; 
-    
     box-shadow: 0 1px 3px 0 #000000;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     text-align: center;
-    /* padding: 10px 16px;
-    margin: 2px 0; */
+    padding: 10px 16px;
+    margin: 2px 0;
     border-bottom: 1px solid #fafafa;
   }
   

@@ -79,7 +79,7 @@ export default function SignIn({ csrfToken, providers }) {
     }
   };
   return (
-    <>
+    <div className="gradient__bg">
       <TextField
         input
         name="csrfToken"
@@ -179,7 +179,7 @@ export default function SignIn({ csrfToken, providers }) {
           </div>
         );
       })}
-    </>
+    </div>
   );
 }
 

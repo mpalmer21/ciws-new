@@ -7,13 +7,10 @@ const ContactUs = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
+
     emailjs
-      .sendForm(
-        "service_10vg1fh",
-        "template_e6p8b5h",
-        form.current,
-        "3ymUBOqrOlyDsYSVp"
-      )
+      .sendForm("service_10vg1fh", "template_e6p8b5h", form.current, API_KEY)
       .then(
         (result) => {
           console.log(result.text);

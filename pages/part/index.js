@@ -62,14 +62,6 @@ export async function getServerSideProps() {
   const result = await Part.find({});
 
   const parts = JSON.parse(JSON.stringify(result));
-  const filtered = parts.map((part) => {
-    return {
-      _id: part._id,
-      uiqueId: part.uiqueId,
-      stampCasting: part.stampCasting,
-      blast: part.blast,
-    };
-  });
 
-  return { props: { parts: filtered } };
+  return { props: { parts: parts } };
 }

@@ -102,9 +102,31 @@ export default function Guides() {
     );
   }
   return (
-    <div className="gradient__bg">
-      Content protected sign in to access <br />
-      <button onClick={() => signIn()}>Sign in</button>
+    <div className="gradient__bg" style={{}}>
+      <h1
+        style={{
+          fontSize: "40px",
+          fontWeight: "bold",
+          fill: "#003f47",
+          textAlign: "center",
+        }}
+      >
+        Content protected sign in to access
+      </h1>{" "}
+      <br />
+      <button
+        style={{
+          fontSize: "30px",
+
+          borderRadius: "30px",
+
+          justifyItems: "center",
+          alignItems: "center",
+        }}
+        onClick={() => signIn()}
+      >
+        Sign in
+      </button>
     </div>
   );
 }

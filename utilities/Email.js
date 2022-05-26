@@ -26,7 +26,7 @@ const ContactUs = () => {
   return (
     <form ref={form} onSubmit={sendEmail}>
       <label>Message</label>
-      <input name="message" placeholder="Do not use" />
+      <input name="message" placeholder="Enter Message" />
       <input type="submit" value="Send" />
     </form>
   );

@@ -10,7 +10,7 @@ const ContactUs = () => {
     const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
 
     emailjs
-      .sendForm("service_4ljnm2r", "template_e6p8b5h", form.current, API_KEY)
+      .sendForm("service_i2uusu7", "template_wto6huw", form.current, API_KEY)
       .then(
         (result) => {
           console.log(result.text);

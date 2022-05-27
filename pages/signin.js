@@ -139,29 +139,29 @@ export default function SignIn({ csrfToken, providers }) {
               >
                 Sign In
               </Button>
-              <Button
-                onClick={(e) => signupUser(e)}
-                type="submit"
-                href="#"
-                fullWidth
-                variant="contained"
-                sx={{ mt: 3, mb: 2 }}
-              >
-                Sign up
-              </Button>
+//               <Button
+//                 onClick={(e) => signupUser(e)}
+//                 type="submit"
+//                 href="#"
+//                 fullWidth
+//                 variant="contained"
+//                 sx={{ mt: 3, mb: 2 }}
+//               >
+//                 Sign up
+//               </Button>
               <h1>{message}</h1>
-              <Grid container>
-                <Grid item xs>
-                  <Link href="#" variant="body2">
-                    Forgot password?
-                  </Link>
-                </Grid>
-                <Grid item>
-                  <Link href="#" variant="body2">
-                    {"Don't have an account? Sign Up"}
-                  </Link>
-                </Grid>
-              </Grid>
+//               <Grid container>
+//                 <Grid item xs>
+//                   <Link href="#" variant="body2">
+//                     Forgot password?
+//                   </Link>
+//                 </Grid>
+//                 <Grid item>
+//                   <Link href="#" variant="body2">
+//                     {"Don't have an account? Sign Up"}
+//                   </Link>
+//                 </Grid>
+//               </Grid>
             </Box>
           </Box>
           <Copyright sx={{ mt: 8, mb: 4 }} />

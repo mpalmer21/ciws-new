@@ -149,7 +149,7 @@ export default function SignIn({ csrfToken, providers }) {
 //               >
 //                 Sign up
 //               </Button>
-              <h1>{message}</h1>
+//               <h1>{message}</h1>
 //               <Grid container>
 //                 <Grid item xs>
 //                   <Link href="#" variant="body2">

@@ -233,7 +233,7 @@ const FormDetails = ({ form }) => {
                 <strong>Signature:</strong>
                 {form.signature}
               </div>
-              <Link href={`/form/for/${form._id}` passHref}>
+              <Link href={`/form/for/${form._id}`}>
                 <button>edit</button>
               </Link>
               <div>

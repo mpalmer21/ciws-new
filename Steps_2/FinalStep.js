@@ -15,8 +15,9 @@ const Finalstep = (props) => {
       <form onSubmit={handleSubmit}>
         <ul>{listItems}</ul>
         <button type="submit">Submit</button>
-        <Email />
+       
       </form>
+       <Email />
     </div>
   );
 };

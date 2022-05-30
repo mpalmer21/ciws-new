@@ -14,7 +14,7 @@ export default async function handler(req, res) {
         try {
           const part = await Part.find();
 
-          res.status(200).json({ success: true, session });
+          res.status(200).json(part);
         } catch (error) {
           res.status(404).json({ message: error.message });
         }
